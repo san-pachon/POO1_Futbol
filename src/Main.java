@@ -7,7 +7,11 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner leer = new Scanner(System.in);
-        Player pl1 = new Player();
+       Player pl1 = new Player();
+        Player pl2 = new Player();
+        Player pl3 = new Player("One Dollar", 15);
+        System.out.println(pl3.dorsal);
+        //pl2.crearPlayer();
         //System.out.println("Ingrese el nombre del jugador");
         pl1.name = "Puttazzo";
         pl1.dorsal=9;
@@ -28,6 +32,7 @@ public class Main {
         team1.players[0]=pl1;
 
         System.out.println(team1.players[0].position);
+        System.out.println(pl2.name);
 
     }
 }
