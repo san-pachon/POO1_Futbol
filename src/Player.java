@@ -1,59 +1,35 @@
 import java.time.LocalDate;
 import java.util.Date;
 import java.util.Scanner;
-
-public class Player {
-
-    Scanner leer = new Scanner(System.in);
+public class Player{
     //Atributos de la clase
-
-    public String name;
+    public String nombre;
     public int dorsal;
-    public String team;
-    public String position;
-    public double weight;
-    public double height;
+    public String posicion;
+    public double peso;
+    public double altura;
     public LocalDate birthday;
-    public String nationality;
+    public String nacionalidad;
     public boolean isActive;
-
-    public Player()
-    {
-        System.out.println("Player por Constructor");
-        name = leer.nextLine();
+    public Player crearPlayer(){
+        Scanner leer = new Scanner(System.in);
+        System.out.print("Ingrese el nombre: ");
+        nombre = leer.nextLine();
+        System.out.print("Ingrese el dorsal: ");
         dorsal = leer.nextInt();
-        team = leer.next();
-    }
-
-    public Player(String name, int dorsal)
-    {
-        this.name = name;
-        this.dorsal = dorsal;
-    }
-
-    public Player crearPlayer()
-    {
-        System.out.println("Creando el player");
-        System.out.println("Ingresar Nombre");
-        name = leer.nextLine();
-        System.out.println("Ingresar Dorsal");
-        dorsal = leer.nextInt();
-        System.out.println("Ingresar Team");
-        team = leer.nextLine();
-        System.out.println("Ingresar Position");
-        position = leer.nextLine();
-        System.out.println("Ingresar Weight");
-        weight = leer.nextDouble();
-        System.out.println("Ingresar Height");
-        height = leer.nextDouble();
-        //System.out.println("Ingresar birthday");
-        //birthday = LocalDate.parse(leer.nextLine());
-        System.out.println("Ingresar nationality");
-        nationality = leer.nextLine();
+        leer.nextLine();
+        System.out.print("Ingrese la posición: ");
+        posicion = leer.nextLine();
+        System.out.print("Ingrese el peso: ");
+        peso = leer.nextDouble();
+        System.out.print("Ingrese la altura: ");
+        altura = leer.nextDouble();
+        leer.nextLine();
+        // System.out.print("Ingrese la fecha de nacimiento (yyyy-mm-dd): ");
+        // birthday = LocalDate.parse(leer.nextLine()); // si quieres usarlo
+        System.out.print("Ingrese la nacionalidad: ");
+        nacionalidad = leer.nextLine();
         isActive = true;
-
         return this;
-
     }
-
 }
